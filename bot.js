@@ -2,7 +2,7 @@
 const Discord = require('discord.js');
 const disco = new Discord.Client();
 const prefix = "d>";
-const allowedUsers = ["Gigi#0979 ", "Douglas#0969", "Bunny#9897", "DD#1462"];
+const allowedUsers = ["@Gigi#0979 ", "@Douglas#0969", "@Bunny#9897", "@DD#1462"];
 const roles = ["KingDisco", "QueenDisco"];
 
 disco.on('ready', () => {
