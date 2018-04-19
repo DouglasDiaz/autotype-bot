@@ -29,7 +29,7 @@ disco.on('message', message => {
       partyOn = true;
       setInterval(() => { discoRole(); }, 800);
     //} else {
-      message.reply("U wish u were that important");
+      //message.reply("U wish u were that important");
     //}
   } else if (message.content === "d>stopdisco" && partyOn == true) {
     //if (allowedUsers.includes(message.author.id)) {
