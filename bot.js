@@ -22,7 +22,7 @@ disco.on('message', message => {
   }
   
   if (message.content === "d>blablabla") {
-    message.reply("blablabla?");
+    message.reply("/tts blablabla?");
   } else if (message.content === "d>startdisco" && partyOn == false) {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
