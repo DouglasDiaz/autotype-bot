@@ -4,6 +4,7 @@ const disco = new Discord.Client();
 const prefix = "d>";
 const allowedUsers = ["@Gigi#0979 ", "@Douglas#0969", "@Bunny#9897", "@DD#1462"];
 const roles = ["KingDisco", "QueenDisco"];
+let partyOn = false;
 
 disco.on('ready', () => {
   console.log('Connected');
@@ -22,18 +23,20 @@ disco.on('message', message => {
   
   if (message.content === "d>blablabla") {
     message.reply("blablabla?");
-  } else if (message.content === "d>startdisco") {
-    if (allowedUsers.includes(message.author.id)) {
+  } else if (message.content === "d>startdisco" && partyOn == false) {
+    //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
+      partyOn = true;
       setInterval(() => { discoRole(); }, 800);
-    } else {
+    //} else {
       message.reply("U wish u were that important");
-    }
-  } else if (message.content === "d>stopdisco") {
-    if (allowedUsers.includes(message.author.id)) {
+    //}
+  } else if (message.content === "d>stopdisco" && partyOn == true) {
+    //if (allowedUsers.includes(message.author.id)) {
       message.reply("Ok wrap it up, Party is over.");
+      partyOn = false;
       setTimeout(() => { console.log(process.exit(0)); }, 300);
-    }
+    //}
   }
   
 });
