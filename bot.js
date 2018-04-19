@@ -1,21 +1,14 @@
-var Discord = require('discord.io');
+const Discord = require('discord.js');
+const client = new Discord.Client();
 
-var bot = new Discord.Client();
-
-bot.on('ready', function () {
+client.on('ready', () => {
   console.log('Connected');
-  console.log('Logged in as: ');
-  console.log(bot.username + ' - (' + bot.id + ')');
 });
 
-bot.on('message', function (user, userID, channelID, message, event) {
-  if (message === "blablabla") {
-    console.log(channelID);
-    bot.sendMessage({
-      to: channelID,
-      message: "pong"
-    });
+client.on('message', message => {
+  if (message.content === "blablabla") {
+    message.reply("blablabla?");
   }
 });
 
-bot.login(process.env.BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
