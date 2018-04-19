@@ -26,7 +26,7 @@ disco.on('message', message => {
 
   if (message.content === "d>startdisco") {
     if (allowedUsers.includes(message.author.id)) {
-      setInterval(() => { discoRole(); }, 300);
+      setInterval(() => { discoRole(); }, 800);
     }
   } else {
     if (message.content === "d>stopdisco") {
