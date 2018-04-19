@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js');
 const disco = new Discord.Client();
-const prefix = "d>;
+const prefix = "d>";
 const allowedUsers = config.allowedUsers;
 const roles = ["🅺🅸🅽🅶", "𝓠𝓾𝓮𝓮𝓷"];
 
@@ -11,7 +11,7 @@ disco.on('ready', () => {
 });
 
 disco.on('message', message => {
-  if (message.content === ">blablabla") {
+  if (message.content === "d>blablabla") {
     message.reply("blablabla?");
   }
   
