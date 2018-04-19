@@ -10,10 +10,6 @@ disco.on('ready', () => {
 });
 
 disco.on('message', message => {
-  if (message.content === "d>blablabla") {
-    message.reply("blablabla?");
-  }
-
   function discoRole() {
     roles.forEach((role) => {
       let theRole = message.guild.roles.find("name", role);
@@ -23,22 +19,23 @@ disco.on('message', message => {
       });
     });
   }
-
-  if (message.content === "d>startdisco") {
+  
+  if (message.content === "d>blablabla") {
+    message.reply("blablabla?");
+  } else if (message.content === "d>startdisco") {
     if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
       setInterval(() => { discoRole(); }, 800);
     } else {
       message.reply("U wish u were that important");
     }
-  } else {
-    if (message.content === "d>stopdisco") {
-      if (allowedUsers.includes(message.author.id)) {
-        message.reply("Ok wrap it up, Party is over.");
-        setTimeout(() => { console.log(process.exit(0)); }, 300);
-      }
+  } else if (message.content === "d>stopdisco") {
+    if (allowedUsers.includes(message.author.id)) {
+      message.reply("Ok wrap it up, Party is over.");
+      setTimeout(() => { console.log(process.exit(0)); }, 300);
     }
   }
+  
 });
 
 disco.login(process.env.BOT_TOKEN);
