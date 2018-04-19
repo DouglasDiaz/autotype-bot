@@ -1,5 +1,8 @@
 const Discord = require('discord.js');
-const client = new Discord.Client();
+const client = new Discord.Client({
+  autorun: true,
+  token: process.env.BOT_TOKEN
+});
 
 client.on('ready', () => {
   console.log('Connected');
@@ -25,4 +28,4 @@ client.on('message', message => {
      }
 });
 
-client.login(process.env.BOT_TOKEN);
+//client.login(process.env.BOT_TOKEN);
