@@ -27,7 +27,7 @@ disco.on('message', message => {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
       partyOn = true;
-      setInterval(() => { discoRole(); }, 800);
+      setInterval(() => { discoRole(); }, 100);
     //} else {
       //message.reply("U wish u were that important");
     //}
@@ -35,7 +35,7 @@ disco.on('message', message => {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Ok wrap it up, Party is over.");
       partyOn = false;
-      setTimeout(() => { console.log(process.exit(0)); }, 300);
+      setTimeout(() => { console.log(process.exit(0)); }, 100);
     //}
   }
   
