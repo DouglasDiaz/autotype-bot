@@ -33,11 +33,13 @@ disco.on('message', message => {
     //}
   } else if (message.content === "d>stopdisco" && partyOn == true) {
     //if (allowedUsers.includes(message.author.id)) {
-      message.reply("Ok wrap it up, Party is over.");
+      message.reply("Ok wrap it up, Party is over.", message.channel);
       partyOn = false;
       setTimeout(() => { console.log(process.exit(0)); }, 1000);
     //}
   }
+  
+  //if (message.channel
   
 });
 
