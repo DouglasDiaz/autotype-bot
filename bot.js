@@ -22,7 +22,7 @@ disco.on('message', message => {
   }
   
   if (message.content === "d>blablabla") {
-    message.reply("blablabla?");
+    message.reply("blablabla?", message.channel);
   } else if (message.content === "d>startdisco" && partyOn == false) {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
@@ -33,7 +33,7 @@ disco.on('message', message => {
     //}
   } else if (message.content === "d>stopdisco" && partyOn == true) {
     //if (allowedUsers.includes(message.author.id)) {
-      message.reply("Ok wrap it up, Party is over.", message.channel);
+      message.reply("Ok wrap it up, Party is over.");
       partyOn = false;
       setTimeout(() => { console.log(process.exit(0)); }, 1000);
     //}
