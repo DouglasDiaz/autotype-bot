@@ -22,7 +22,9 @@ disco.on('message', message => {
   }
   
   if (message.content === "d>blablabla") {
-    message.reply("blablabla?", message.channel);
+    message.edit("blablabla?", message.channel)
+      .then(msg => console.log(`New message content: ${msg}`))
+      .catch(console.error);
   } else if (message.content === "d>startdisco" && partyOn == false) {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
