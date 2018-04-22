@@ -21,11 +21,11 @@ disco.on('message', message => {
     });
   }
   
-  if (message.content === "d>blablabla") {
+  if ((message.content).toLowerCase() === "d>blablabla") {
     message.reply("bla what bish?!", message.channel);
       //.then(msg => console.log(`New message content: ${msg}`))
       //.catch(console.error);
-  } else if (message.content === "d>startdisco" && partyOn == false) {
+  } else if ((message.content).toLowerCase() === "d>startdisco" && partyOn == false) {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Sure thing boss!");
       partyOn = true;
@@ -33,7 +33,7 @@ disco.on('message', message => {
     //} else {
       //message.reply("U wish u were that important");
     //}
-  } else if (message.content === "d>stopdisco" && partyOn == true) {
+  } else if ((message.content).toLowerCase() === "d>stopdisco" && partyOn == true) {
     //if (allowedUsers.includes(message.author.id)) {
       message.reply("Ok wrap it up, Party is over.");
       partyOn = false;
